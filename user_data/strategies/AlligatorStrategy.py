@@ -12,7 +12,6 @@ from freqtrade.strategy import (BooleanParameter, CategoricalParameter, DecimalP
 # --------------------------------
 # Add your lib to import here
 import ta
-import pandas_ta as pda
 
 
 # This class is a sample. Feel free to customize it.

@@ -14,14 +14,17 @@ Do not use these strategies without (back)testing them.**
 1. Install Freqtrade (see [documentation](https://www.freqtrade.io/en/stable/docker_quickstart/ "official documentation").)
 2. Add strategies to your [user_data/strategies/](user_data/strategies/) folder
 3. Set up your [/user_data/config.json](/user_data/config.json) file. You'll find some examples in this repo.
-4. Add the strategy name in the [docker-compose.yml](/docker-compose.yml)
+4. Add the dockerfile [/docker/Dockerfile.custom](/docker/Dockerfile.custom)
+5. Add the dockerfile and the strategy name in the [docker-compose.yml](/docker-compose.yml)
 
 ```
 ---
 version: '3'
 services:
   freqtrade:
-    image: freqtradeorg/freqtrade:stable
+    build:
+      context: .
+      dockerfile: "./docker/Dockerfile.custom"
     restart: unless-stopped
     container_name: freqtrade
     volumes:
@@ -33,9 +36,8 @@ services:
       --logfile /freqtrade/user_data/logs/freqtrade.log
       --db-url sqlite:////freqtrade/user_data/tradesv3.sqlite
       --config /freqtrade/user_data/config.json
-      --strategy TrixStrategy
+      --strategy AlligatorStrategy
 ```
-
-5. In your Freqtrade folder: `sudo docker-compose up -d`
+6. In your Freqtrade folder: `sudo docker-compose up -d`
 
 Thanks to Crypto Robot, and to all those who share their knowledge
