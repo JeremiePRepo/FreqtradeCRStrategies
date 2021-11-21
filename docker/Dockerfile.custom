@@ -1,0 +1,3 @@
+FROM freqtradeorg/freqtrade:stable
+
+RUN pip install ta && pip install pandas_ta
