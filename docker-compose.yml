@@ -29,3 +29,6 @@ services:
     #  --strategy CrossEMAStrategy
     #  --strategy SupertrendStrategy
     #  --strategy TrixStrategy
+    #  --strategy TrixV15Strategy
+    #  --strategy TrixV21Strategy
+    #  --strategy TrixV23Strategy
