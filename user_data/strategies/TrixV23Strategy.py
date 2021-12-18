@@ -29,10 +29,6 @@ class TrixV23Strategy(IStrategy):
     Sources : 
     Cripto Robot : https://www.youtube.com/watch?v=uE04UROWkjs&list=PLpJ7cz_wOtsrqEQpveLc2xKLjOBgy4NfA&index=4
     Github : https://github.com/CryptoRobotFr/TrueStrategy/blob/main/TrixStrategy/Trix_Complete_backtest.ipynb
-
-    Hyperopt :
-    - Trix + rsi - Onlyprofit - buy / sell
-
     """
     # Strategy interface version - allow new iterations of the strategy interface.
     # Check the documentation or the Sample strategy to get the latest version.
@@ -93,14 +89,14 @@ class TrixV23Strategy(IStrategy):
 
     buy_params = {
         "buy_trix_signal_type": "trigger",
-        "buy_trix_src": "high",
-        "buy_trix_timeperiod": 5,
-        "buy_trix_signal_timeperiod": 22,
+        "buy_trix_src": "low",
+        "buy_trix_timeperiod": 8,
+        "buy_trix_signal_timeperiod": 19,
 
         "buy_stoch_rsi_enabled": True,
-        "buy_rsi_timeperiod": 5,
-        "buy_stoch_rsi_timeperiod": 12,
-        "buy_stoch_rsi": 0.629,
+        "buy_rsi_timeperiod": 14,
+        "buy_stoch_rsi_timeperiod": 14,
+        "buy_stoch_rsi": 0.901,
 
         "buy_ema_enabled": True,
         "buy_ema_src": "open",
@@ -114,14 +110,14 @@ class TrixV23Strategy(IStrategy):
 
     sell_params = {
         "sell_trix_signal_type": "trailing",
-        "sell_trix_src": "low",
-        "sell_trix_timeperiod": 12,
-        "sell_trix_signal_timeperiod": 22,
+        "sell_trix_src": "high",
+        "sell_trix_timeperiod": 10,
+        "sell_trix_signal_timeperiod": 19,
 
         "sell_stoch_rsi_enabled": True,
-        "sell_rsi_timeperiod": 12,
-        "sell_stoch_rsi_timeperiod": 23,
-        "sell_stoch_rsi": 0.34,
+        "sell_rsi_timeperiod": 14,
+        "sell_stoch_rsi_timeperiod": 14,
+        "sell_stoch_rsi": 0.183,
 
         "sell_atr_enabled": True,
         "sell_atr_timeperiod": 30,
@@ -134,36 +130,36 @@ class TrixV23Strategy(IStrategy):
     
     # buy
 
-    buy_trix_signal_type = CategoricalParameter(['trailing', 'trigger'], default='trigger', space="buy", optimize=True, load=True)
-    buy_trix_src = CategoricalParameter(['open', 'high', 'low', 'close'], default='close', space="buy", optimize=True, load=True)
-    buy_trix_timeperiod = IntParameter(5, 25, default=9, space="buy", optimize=True, load=True)
-    buy_trix_signal_timeperiod = IntParameter(5, 25, default=21, space="buy", optimize=True, load=True)
+    buy_trix_signal_type = CategoricalParameter(['trailing', 'trigger'], default='trigger', space="buy", optimize=False, load=True)
+    buy_trix_src = CategoricalParameter(['open', 'high', 'low', 'close'], default='close', space="buy", optimize=False, load=True)
+    buy_trix_timeperiod = IntParameter(5, 25, default=9, space="buy", optimize=False, load=True)
+    buy_trix_signal_timeperiod = IntParameter(5, 25, default=21, space="buy", optimize=False, load=True)
 
-    buy_stoch_rsi_enabled = BooleanParameter(default=True, space="buy", optimize=True, load=True)
-    buy_rsi_timeperiod = IntParameter(5, 25, default=14, space="buy", optimize=True, load=True)
-    buy_stoch_rsi = DecimalParameter(0.6, 0.99, decimals=3, default=0.987, space="buy", optimize=True, load=True)
-    buy_stoch_rsi_timeperiod = IntParameter(5, 25, default=14, space="buy", optimize=True, load=True)
+    buy_stoch_rsi_enabled = BooleanParameter(default=True, space="buy", optimize=False, load=True)
+    buy_rsi_timeperiod = IntParameter(5, 25, default=14, space="buy", optimize=False, load=True)
+    buy_stoch_rsi = DecimalParameter(0.6, 0.99, decimals=3, default=0.987, space="buy", optimize=False, load=True)
+    buy_stoch_rsi_timeperiod = IntParameter(5, 25, default=14, space="buy", optimize=False, load=True)
 
     buy_ema_enabled = BooleanParameter(default=False, space="buy", optimize=False, load=True)
     buy_ema_timeperiod = IntParameter(9, 100, default=21, space="buy", optimize=False, load=True)
     buy_ema_multiplier = DecimalParameter(0.8, 1.2, decimals=2, default=1.00, space="buy", optimize=False, load=True)
     buy_ema_src = CategoricalParameter(['open', 'high', 'low', 'close'], default='close', space="buy", optimize=False, load=True)
 
-    buy_btc_ema_enabled = BooleanParameter(default=False, space="buy", optimize=False, load=True)
-    buy_btc_ema_timeperiod = IntParameter(150, 250, default=200, space="buy", optimize=False, load=True)
-    buy_btc_ema_multiplier = DecimalParameter(0.8, 1.0, decimals=3, default=0.97, space="buy", optimize=False, load=True)
+    buy_btc_ema_enabled = BooleanParameter(default=False, space="buy", optimize=True, load=True)
+    buy_btc_ema_timeperiod = IntParameter(150, 250, default=200, space="buy", optimize=True, load=True)
+    buy_btc_ema_multiplier = DecimalParameter(0.8, 1.0, decimals=3, default=0.97, space="buy", optimize=True, load=True)
 
     # sell
 
-    sell_trix_signal_type = CategoricalParameter(['trailing', 'trigger'], default='trailing', space="sell", optimize=True, load=True)
-    sell_trix_src = CategoricalParameter(['open', 'high', 'low', 'close'], default='close', space="sell", optimize=True, load=True)
-    sell_trix_timeperiod = IntParameter(5, 25, default=9, space="sell", optimize=True, load=True)
-    sell_trix_signal_timeperiod = IntParameter(5, 25, default=21, space="sell", optimize=True, load=True)
+    sell_trix_signal_type = CategoricalParameter(['trailing', 'trigger'], default='trailing', space="sell", optimize=False, load=True)
+    sell_trix_src = CategoricalParameter(['open', 'high', 'low', 'close'], default='close', space="sell", optimize=False, load=True)
+    sell_trix_timeperiod = IntParameter(5, 25, default=9, space="sell", optimize=False, load=True)
+    sell_trix_signal_timeperiod = IntParameter(5, 25, default=21, space="sell", optimize=False, load=True)
 
-    sell_stoch_rsi_enabled = BooleanParameter(default=True, space="sell", optimize=True, load=True)
-    sell_rsi_timeperiod = IntParameter(5, 25, default=14, space="sell", optimize=True, load=True)
-    sell_stoch_rsi = DecimalParameter(0.01, 0.4, decimals=3, default=0.048, space="sell", optimize=True, load=True)
-    sell_stoch_rsi_timeperiod = IntParameter(5, 25, default=14, space="sell", optimize=True, load=True)
+    sell_stoch_rsi_enabled = BooleanParameter(default=True, space="sell", optimize=False, load=True)
+    sell_rsi_timeperiod = IntParameter(5, 25, default=14, space="sell", optimize=False, load=True)
+    sell_stoch_rsi = DecimalParameter(0.01, 0.4, decimals=3, default=0.048, space="sell", optimize=False, load=True)
+    sell_stoch_rsi_timeperiod = IntParameter(5, 25, default=14, space="sell", optimize=False, load=True)
 
     sell_atr_enabled = BooleanParameter(default=True, space="sell", optimize=False, load=True)
     sell_atr_timeperiod = IntParameter(9, 30, default=14, space="sell", optimize=False, load=True)
@@ -171,20 +167,20 @@ class TrixV23Strategy(IStrategy):
 
     plot_config = {
         'main_plot': {
-            'trix_b_5': {'color': 'blue'},
-            'trix_s_12': {'color': 'orange'},
+            'trix_b_19': {'color': 'blue'},
+            'trix_s_10': {'color': 'orange'},
             'ema_b_signal': {'color': 'red'},
             'btc_usdt_close_1h': {},
-            'btc_usdt_ema_184_1h': {},
+            'btc_usdt_ema_200_1h': {},
         },
          'subplots': {
             "TRIX BUY": {
                 'trix_b_pct': {'color': 'blue'},
-                'trix_b_signal_22': {'color': 'orange'},
+                'trix_b_signal_8': {'color': 'orange'},
             },
             "TRIX SELL": {
                 'trix_s_pct': {'color': 'blue'},
-                'trix_s_signal_22': {'color': 'orange'},
+                'trix_s_signal_19': {'color': 'orange'},
             },
             "STOCH RSI": {
                 'b_stoch_rsi': {'color': 'blue'},

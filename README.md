@@ -142,35 +142,35 @@ services:
 | Backtesting to         | 2021-12-12 15:00:00 |
 | Max open trades        | 269                 |
 |                        |                     |
-| Total/Daily Avg Trades | 2176 / 6.31         |
+| Total/Daily Avg Trades | 4384 / 12.71        |
 | Starting balance       | 1000.000 USDT       |
-| Final balance          | 2281.925 USDT       |
-| Absolute profit        | 1281.925 USDT       |
-| Total profit %         | 128.19%             |
-| Trades per day         | 6.31                |
-| Avg. daily profit %    | 0.37%               |
+| Final balance          | 5087.156 USDT       |
+| Absolute profit        | 4087.156 USDT       |
+| Total profit %         | 408.72%             |
+| Trades per day         | 12.71               |
+| Avg. daily profit %    | 1.18%               |
 | Avg. stake amount      | 100.000 USDT        |
-| Total trade volume     | 217600.000 USDT     |
+| Total trade volume     | 438400.000 USDT     |
 |                        |                     |
-| Best Pair              | OXT/USDT 108.15%    |
-| Worst Pair             | ATOM/USDT -65.26%   |
-| Best trade             | BTS/USDT 55.24%     |
-| Worst trade            | DNT/USDT -31.14%    |
-| Best day               | 134.056 USDT        |
-| Worst day              | -225.890 USDT       |
-| Days win/draw/lose     | 158 / 111 / 77      |
-| Avg. Duration Winners  | 12:30:00            |
-| Avg. Duration Loser    | 1 day, 10:50:00     |
+| Best Pair              | OXT/USDT 113.59%    |
+| Worst Pair             | RLC/USDT -64.41%    |
+| Best trade             | DNT/USDT 55.24%     |
+| Worst trade            | MANA/USDT -31.14%   |
+| Best day               | 213.146 USDT        |
+| Worst day              | -332.471 USDT       |
+| Days win/draw/lose     | 171 / 97 / 78       |
+| Avg. Duration Winners  | 13:34:00            |
+| Avg. Duration Loser    | 1 day, 12:12:00     |
 | Rejected Buy signals   | 0                   |
 |                        |                     |
-| Min balance            | 1006.681 USDT       |
-| Max balance            | 2511.253 USDT       |
-| Drawdown               | 470.75%             |
-| Drawdown               | 471.220 USDT        |
-| Drawdown high          | 1153.072 USDT       |
-| Drawdown low           | 681.853 USDT        |
-| Drawdown Start         | 2021-05-04 00:00:00 |
-| Drawdown End           | 2021-07-22 22:00:00 |
+| Min balance            | 997.635 USDT        |
+| Max balance            | 5450.985 USDT       |
+| Drawdown               | 508.82%             |
+| Drawdown               | 509.325 USDT        |
+| Drawdown high          | 3708.862 USDT       |
+| Drawdown low           | 3199.537 USDT       |
+| Drawdown Start         | 2021-09-19 10:00:00 |
+| Drawdown End           | 2021-09-28 23:00:00 |
 | Market change          | 561.59%             |
 ================================================
 ```
