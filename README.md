@@ -85,7 +85,7 @@ services:
 ================================================
 ```
 
-![TrixV15Strategy](https://raw.githubusercontent.com/DarkTipiak/FreqtradeCRStrategies/TrixV15Strategy.freqtrade-profit-plot.png)
+![TrixV15Strategy](https://raw.githubusercontent.com/DarkTipiak/FreqtradeCRStrategies/main/TrixV15Strategy.freqtrade-profit-plot.png)
 
 ### TrixV21Strategy
 
@@ -130,7 +130,7 @@ services:
 ================================================
 ```
 
-![TrixV21Strategy](https://raw.githubusercontent.com/DarkTipiak/FreqtradeCRStrategies/TrixV21Strategy.freqtrade-profit-plot.png)
+![TrixV21Strategy](https://raw.githubusercontent.com/DarkTipiak/FreqtradeCRStrategies/main/TrixV21Strategy.freqtrade-profit-plot.png)
 
 ### TrixV23Strategy
 
@@ -175,7 +175,7 @@ services:
 ================================================
 ```
 
-![TrixV23Strategy](https://raw.githubusercontent.com/DarkTipiak/FreqtradeCRStrategies/TrixV23Strategy.freqtrade-profit-plot.png)
+![TrixV23Strategy](https://raw.githubusercontent.com/DarkTipiak/FreqtradeCRStrategies/main/TrixV23Strategy.freqtrade-profit-plot.png)
 
 ---
 
