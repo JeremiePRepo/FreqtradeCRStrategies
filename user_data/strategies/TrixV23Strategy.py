@@ -167,16 +167,16 @@ class TrixV23Strategy(IStrategy):
 
     plot_config = {
         'main_plot': {
-            'trix_b_19': {'color': 'blue'},
+            'trix_b_8': {'color': 'blue'},
             'trix_s_10': {'color': 'orange'},
             'ema_b_signal': {'color': 'red'},
-            'btc_usdt_close_1h': {},
-            'btc_usdt_ema_200_1h': {},
+            'btc_usdt_close_1h': {'color': 'purple'},
+            'btc_usdt_ema_184_1h': {'color': 'yellow'},
         },
          'subplots': {
             "TRIX BUY": {
                 'trix_b_pct': {'color': 'blue'},
-                'trix_b_signal_8': {'color': 'orange'},
+                'trix_b_signal_19': {'color': 'orange'},
             },
             "TRIX SELL": {
                 'trix_s_pct': {'color': 'blue'},
@@ -184,7 +184,7 @@ class TrixV23Strategy(IStrategy):
             },
             "STOCH RSI": {
                 'b_stoch_rsi': {'color': 'blue'},
-                's_stoch_rsi': {},
+                's_stoch_rsi': {'color': 'orange'},
             },
         }
     }
