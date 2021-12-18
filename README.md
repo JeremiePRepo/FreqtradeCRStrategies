@@ -40,4 +40,135 @@ services:
 ```
 6. In your Freqtrade folder: `sudo docker-compose up -d`
 
+## Backtests
+
+### TrixV15Strategy
+
+```
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-01-01 00:00:00 |
+| Backtesting to         | 2021-12-12 15:00:00 |
+| Max open trades        | 269                 |
+|                        |                     |
+| Total/Daily Avg Trades | 5933 / 17.2         |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 7037.690 USDT       |
+| Absolute profit        | 6037.690 USDT       |
+| Total profit %         | 603.77%             |
+| Trades per day         | 17.2                |
+| Avg. daily profit %    | 1.75%               |
+| Avg. stake amount      | 100.000 USDT        |
+| Total trade volume     | 593300.000 USDT     |
+|                        |                     |
+| Best Pair              | OXT/USDT 198.10%    |
+| Worst Pair             | ONG/USDT -112.13%   |
+| Best trade             | DNT/USDT 55.24%     |
+| Worst trade            | MDT/USDT -31.14%    |
+| Best day               | 297.207 USDT        |
+| Worst day              | -1606.388 USDT      |
+| Days win/draw/lose     | 285 / 5 / 55        |
+| Avg. Duration Winners  | 13:29:00            |
+| Avg. Duration Loser    | 5 days, 21:39:00    |
+| Rejected Buy signals   | 0                   |
+|                        |                     |
+| Min balance            | 1014.400 USDT       |
+| Max balance            | 8337.489 USDT       |
+| Drawdown               | 2419.06%            |
+| Drawdown               | 2421.476 USDT       |
+| Drawdown high          | 4515.515 USDT       |
+| Drawdown low           | 2094.040 USDT       |
+| Drawdown Start         | 2021-05-10 16:00:00 |
+| Drawdown End           | 2021-06-22 12:00:00 |
+| Market change          | 559.54%             |
+================================================
+```
+
+### TrixV21Strategy
+
+```
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-01-01 00:00:00 |
+| Backtesting to         | 2021-12-12 15:00:00 |
+| Max open trades        | 269                 |
+|                        |                     |
+| Total/Daily Avg Trades | 4719 / 13.68        |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 5696.551 USDT       |
+| Absolute profit        | 4696.551 USDT       |
+| Total profit %         | 469.66%             |
+| Trades per day         | 13.68               |
+| Avg. daily profit %    | 1.36%               |
+| Avg. stake amount      | 100.000 USDT        |
+| Total trade volume     | 471900.000 USDT     |
+|                        |                     |
+| Best Pair              | OXT/USDT 155.60%    |
+| Worst Pair             | SAND/USDT -63.48%   |
+| Best trade             | DNT/USDT 55.24%     |
+| Worst trade            | MANA/USDT -31.14%   |
+| Best day               | 184.460 USDT        |
+| Worst day              | -274.863 USDT       |
+| Days win/draw/lose     | 235 / 17 / 94       |
+| Avg. Duration Winners  | 13:18:00            |
+| Avg. Duration Loser    | 1 day, 14:54:00     |
+| Rejected Buy signals   | 0                   |
+|                        |                     |
+| Min balance            | 988.138 USDT        |
+| Max balance            | 5870.146 USDT       |
+| Drawdown               | 731.08%             |
+| Drawdown               | 731.814 USDT        |
+| Drawdown high          | 3340.155 USDT       |
+| Drawdown low           | 2608.341 USDT       |
+| Drawdown Start         | 2021-05-08 17:00:00 |
+| Drawdown End           | 2021-07-20 19:00:00 |
+| Market change          | 512.58%             |
+================================================
+```
+
+### TrixV23Strategy
+
+```
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-01-01 00:00:00 |
+| Backtesting to         | 2021-12-12 15:00:00 |
+| Max open trades        | 269                 |
+|                        |                     |
+| Total/Daily Avg Trades | 2176 / 6.31         |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 2281.925 USDT       |
+| Absolute profit        | 1281.925 USDT       |
+| Total profit %         | 128.19%             |
+| Trades per day         | 6.31                |
+| Avg. daily profit %    | 0.37%               |
+| Avg. stake amount      | 100.000 USDT        |
+| Total trade volume     | 217600.000 USDT     |
+|                        |                     |
+| Best Pair              | OXT/USDT 108.15%    |
+| Worst Pair             | ATOM/USDT -65.26%   |
+| Best trade             | BTS/USDT 55.24%     |
+| Worst trade            | DNT/USDT -31.14%    |
+| Best day               | 134.056 USDT        |
+| Worst day              | -225.890 USDT       |
+| Days win/draw/lose     | 158 / 111 / 77      |
+| Avg. Duration Winners  | 12:30:00            |
+| Avg. Duration Loser    | 1 day, 10:50:00     |
+| Rejected Buy signals   | 0                   |
+|                        |                     |
+| Min balance            | 1006.681 USDT       |
+| Max balance            | 2511.253 USDT       |
+| Drawdown               | 470.75%             |
+| Drawdown               | 471.220 USDT        |
+| Drawdown high          | 1153.072 USDT       |
+| Drawdown low           | 681.853 USDT        |
+| Drawdown Start         | 2021-05-04 00:00:00 |
+| Drawdown End           | 2021-07-22 22:00:00 |
+| Market change          | 561.59%             |
+================================================
+```
+
 Thanks to Crypto Robot, and to all those who share their knowledge
